@@ -10,9 +10,39 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 0 0 0;
+    padding: 0;
     height: 60px;
     box-shadow: 0 2px 8px rgba(42,67,115,0.08);
+    position: relative;
+}
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    margin-right: 12px;
+    cursor: pointer;
+    z-index: 20;
+}
+.nav-toggle span {
+    display: block;
+    width: 28px;
+    height: 4px;
+    margin: 4px 0;
+    background: #fff;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+.nav-toggle.open span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+.nav-toggle.open span:nth-child(2) {
+    opacity: 0;
+}
+.nav-toggle.open span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
 }
 .navbar ul {
     list-style: none;
@@ -20,6 +50,7 @@ body {
     gap: 32px;
     margin: 0;
     padding: 0;
+    transition: max-height 0.3s, opacity 0.3s;
 }
 .navbar li {
     cursor: pointer;
@@ -149,15 +180,27 @@ ul {
         width: 100vw;
         min-height: 100vh;
         border-radius: 0;
+        margin: 0;
+        padding: 0;
     }
     .profile-header, .sections {
-        padding: 18px 2vw;
+        padding: 0;
     }
     .profile-header {
         flex-direction: column;
         gap: 18px;
         align-items: center;
         text-align: center;
+        width: 100vw;
+        box-sizing: border-box;
+    }
+    .sections {
+        width: 100vw;
+        box-sizing: border-box;
+    }
+    .section {
+        margin-bottom: 24px;
+        padding: 0 10px;
     }
     .profile-photo {
         width: 100px;
@@ -171,11 +214,32 @@ ul {
         font-size: 1em;
     }
     .navbar ul {
-        gap: 12px;
-        font-size: 0.95em;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100vw;
+        background: #2a4373;
+        gap: 0;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        z-index: 10;
+        border-bottom: 1px solid #4a6fa1;
     }
-    .section {
-        margin-bottom: 32px;
+    .navbar ul.open {
+        max-height: 400px;
+        opacity: 1;
+        box-shadow: 0 4px 16px rgba(42,67,115,0.10);
+    }
+    .navbar li {
+        padding: 16px 0;
+        text-align: center;
+        border-bottom: 1px solid #4a6fa1;
+        font-size: 1.1em;
+    }
+    .nav-toggle {
+        display: flex;
     }
     .footer {
         font-size: 0.95em;
