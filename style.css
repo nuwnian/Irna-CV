@@ -4,21 +4,20 @@
     position: sticky;
     z-index: 100;
 }
-.navbar-hide {
-    top: -70px;
-}
-.linkedin-link {
-    display: inline-flex;
+.navbar {
+    background: #2a4373;
+    color: #fff;
+    display: flex;
+    justify-content: flex-start;
     align-items: center;
-    margin-top: 10px;
-    text-decoration: none;
-    transition: opacity 0.2s;
+    padding: 0 18px;
+    height: 60px;
+    box-shadow: 0 2px 8px rgba(42,67,115,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    transition: top 0.3s;
 }
-.linkedin-link:hover {
-    opacity: 0.7;
-}
-body {
-    font-family: 'Montserrat', Arial, sans-serif;
     background: #f4f8fb;
     margin: 0;
     color: #222;
@@ -40,7 +39,7 @@ body {
     font-size: 1.5em;
     letter-spacing: 2px;
     color: #fff;
-    margin-right: auto;
+    margin-right: 24px;
 }
 .nav-toggle {
     display: none;
@@ -76,9 +75,10 @@ body {
     list-style: none;
     display: flex;
     gap: 32px;
-    margin: 0;
+    margin: 0 0 0 auto;
     padding: 0;
     transition: max-height 0.3s, opacity 0.3s;
+    align-items: center;
 }
 .navbar li {
     cursor: pointer;
