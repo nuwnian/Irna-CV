@@ -8,12 +8,20 @@ body {
     background: #2a4373;
     color: #fff;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    padding: 0;
+    padding: 0 18px;
     height: 60px;
     box-shadow: 0 2px 8px rgba(42,67,115,0.08);
     position: relative;
+}
+.nav-logo {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 1.5em;
+    letter-spacing: 2px;
+    color: #fff;
+    margin-right: 24px;
 }
 .nav-toggle {
     display: none;
@@ -22,7 +30,7 @@ body {
     align-items: center;
     width: 40px;
     height: 40px;
-    margin-right: 12px;
+    margin-left: auto;
     cursor: pointer;
     z-index: 20;
 }
@@ -176,6 +184,16 @@ ul {
     color: #b3c6e0;
 }
 @media (max-width: 900px) {
+    .navbar {
+        padding: 0 10px;
+    }
+    .nav-logo {
+        font-size: 1.2em;
+        margin-right: 0;
+    }
+    .nav-toggle {
+        margin-left: auto;
+    }
     .container {
         width: 100vw;
         min-height: 100vh;
