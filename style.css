@@ -1,3 +1,22 @@
+.navbar {
+    transition: top 0.3s;
+    top: 0;
+    position: sticky;
+    z-index: 100;
+}
+.navbar-hide {
+    top: -70px;
+}
+.linkedin-link {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 10px;
+    text-decoration: none;
+    transition: opacity 0.2s;
+}
+.linkedin-link:hover {
+    opacity: 0.7;
+}
 body {
     font-family: 'Montserrat', Arial, sans-serif;
     background: #f4f8fb;
@@ -8,7 +27,7 @@ body {
     background: #2a4373;
     color: #fff;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     padding: 0 18px;
     height: 60px;
@@ -21,7 +40,7 @@ body {
     font-size: 1.5em;
     letter-spacing: 2px;
     color: #fff;
-    margin-right: 24px;
+    margin-right: auto;
 }
 .nav-toggle {
     display: none;
@@ -30,7 +49,8 @@ body {
     align-items: center;
     width: 40px;
     height: 40px;
-    margin-left: auto;
+    margin-left: 0;
+    margin-right: 0;
     cursor: pointer;
     z-index: 20;
 }
@@ -186,13 +206,15 @@ ul {
 @media (max-width: 900px) {
     .navbar {
         padding: 0 10px;
+        justify-content: space-between;
     }
     .nav-logo {
         font-size: 1.2em;
         margin-right: 0;
     }
     .nav-toggle {
-        margin-left: auto;
+        margin-left: 0;
+        margin-right: 0;
     }
     .container {
         width: 100vw;

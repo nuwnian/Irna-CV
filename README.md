@@ -26,13 +26,5 @@ This is a personal portfolio website for Irna Setyawati, designed to showcase he
 - Contact form
 - Easy to update and deploy
 
-## How to Use
-1. Clone or download this repository.
-2. Open `index.html` in your browser to view the portfolio.
-3. To update the profile photo, replace the image file and update the `src` in the HTML if needed.
-
-## Deployment
-You can deploy this site using GitHub Pages, Netlify, Vercel, or any static site hosting service.
-
 ---
 Website created by Yulfa Anni.
